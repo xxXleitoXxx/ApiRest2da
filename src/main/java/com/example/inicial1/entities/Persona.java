@@ -17,7 +17,7 @@ import org.hibernate.envers.NotAudited;
 @Builder
 @Table(name="Persona")
 @Audited
-public class Persona implements Serializable {
+public class Persona extends Base {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
