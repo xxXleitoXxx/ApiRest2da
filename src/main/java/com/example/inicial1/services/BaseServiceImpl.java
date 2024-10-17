@@ -4,14 +4,14 @@ import com.example.inicial1.entities.Base;
 import com.example.inicial1.entities.Persona;
 import com.example.inicial1.repositories.BaseRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
-
 public abstract class BaseServiceImpl <E extends Base, ID extends Serializable> implements BaseService<E,ID> {
+protected BaseRepository<E,ID> baseRepository;
 
-    protected BaseRepository<E,ID> baseRepository;
     public BaseServiceImpl(BaseRepository<E,ID> baseRepository){
         this.baseRepository=baseRepository;
     }
@@ -31,7 +31,7 @@ public abstract class BaseServiceImpl <E extends Base, ID extends Serializable> 
     @Transactional
     public E findByID(ID id) throws Exception {
         try {
-            Optional<E> entityOptional = BaseRepository.findById(id);
+            Optional<E> entityOptional = baseRepository.findById(id);
             return entityOptional.get();
         } catch (Exception e) {
             throw new Exception(e.getMessage());

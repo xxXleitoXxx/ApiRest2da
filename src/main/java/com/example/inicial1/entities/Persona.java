@@ -18,8 +18,8 @@ import org.hibernate.envers.NotAudited;
 @Table(name="Persona")
 @Audited
 public class Persona extends Base {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
     private String apellido;

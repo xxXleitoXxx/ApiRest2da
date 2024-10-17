@@ -9,5 +9,4 @@ import javax.swing.text.html.parser.Entity;
 @Repository
 public interface AutorRepository extends BaseRepository <Autor,Long>{
 
-
 }

@@ -5,7 +5,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 import com.example.inicial1.entities.Base;
 import java.io.Serializable;
 
-@NoRepositoryBean
+@NoRepositoryBean //no permite que se creen instancias
 public interface BaseRepository<E extends Base , ID extends Serializable> extends JpaRepository<E,ID> {
 
 }

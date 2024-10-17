@@ -1,6 +1,6 @@
 package com.example.inicial1.services;
 
-import com.example.inicial1.entities.audit.Base;
+import com.example.inicial1.entities.Base;
 
 import java.io.Serializable;
 import java.util.List;

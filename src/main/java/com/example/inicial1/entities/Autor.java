@@ -17,7 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Audited
 @Table(name="Autor")
-public class Autor extends Base  {
+public class Autor extends Base{
     @Column(name ="nombre")
     private String nombre;
     @Column(name ="apellido")

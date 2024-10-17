@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonaServices extends BaseServiceImpl<Persona,Long>{
-    @Autowired
+public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements PersonaService{
+    @Autowired//
     private PersonaRepository personaRepository;
 
-    public PersonaServices(BaseRepository<Persona,Long> baseRepository){
+    public PersonaServiceImpl(BaseRepository<Persona,Long> baseRepository){
        super(baseRepository);
 
     }
