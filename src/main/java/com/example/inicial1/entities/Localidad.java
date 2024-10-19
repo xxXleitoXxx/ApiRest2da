@@ -16,7 +16,6 @@ import org.hibernate.envers.Audited;
 @NoArgsConstructor
 @AllArgsConstructor
 @Audited
-
 public class Localidad extends Base {
 
     //private long id;
